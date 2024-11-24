@@ -17,7 +17,12 @@ function GetInput(...)
         for option in arg do
             if i == option then success = true end
         end
-        if success ~= true then print("invalid input") end
+        if success ~= true then
+            local errString = "invalid input. please give one of the valid inputs:"
+            for entry in arg do
+                errString = errString .. " " .. entry
+            end
+        end
     end
 
     return i
