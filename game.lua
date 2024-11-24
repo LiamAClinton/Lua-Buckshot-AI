@@ -4,7 +4,7 @@ Description:
 A file to handle any info related to handling game data
 ]]
 
-require("utility.lua")
+require("Lua.BuckshotAI.utility") -- equivalent to folder1/folder2/fileName
 
 -- setting up a new game
 function SetupGame()
@@ -28,8 +28,8 @@ function SetupGame()
         blankLeft = blankShells,
         totalLeft = function() return Game.liveLeft + Game.blankLeft end, -- avoids getting/setting an inaccurate value
         maxBolts = mBolts,
-        players = {} -- will fill later
+        players = {} -- filling outside this via a loop
     }
 
-    -- creating the amount of players that we need
+    -- adding the players to account for (AI + opponentCount)
 end

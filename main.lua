@@ -5,7 +5,7 @@ This is the starting point / main point of interaction for
 this Buckshot Roulette AI
 ]]
 
-require("game.lua")
+require("Lua.BuckshotAI.game") -- equivalent to folder1/folder2/fileName
 
 function Main()
     local quit = false
