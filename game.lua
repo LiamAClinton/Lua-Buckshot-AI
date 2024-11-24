@@ -4,6 +4,8 @@ Description:
 A file to handle any info related to handling game data
 ]]
 
+require("utility.lua")
+
 -- setting up a new game
 function SetupGame()
     -- getting initial parameters
