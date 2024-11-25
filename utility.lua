@@ -22,6 +22,7 @@ function GetInput(...)
             for entry in arg do
                 errString = errString .. " " .. entry
             end
+            errString = errString .. " >> "
         end
     end
 
