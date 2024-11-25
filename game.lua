@@ -11,17 +11,17 @@ function SetupGame()
     -- getting initial parameters
     local liveShells, blankShells, mBolts, opponentCount
 
+    io.write("How many opponents? [1 to 3] >> ")
+    opponentCount = GetInput(1,2,3)
+    
+    io.write("How many bolts (Lives) are you starting with? [1 to 6] >> ")
+    mBolts = GetInput(1,2,3,4,5,6) -- maximum health for the round
+    
     io.write("How many live (Red/White) shells? [0 to 10] >> ")
     liveShells = GetInput(0,1,2,3,4,5,6,7,8,9,10)
 
     io.write("How many blank (Grey/Black) shells? [0 to 10] >> ")
     blankShells = GetInput(0,1,2,3,4,5,6,7,8,9,10)
-
-    io.write("How many bolts (Lives) are you starting with? [1 to 6] >> ")
-    mBolts = GetInput(1,2,3,4,5,6) -- maximum health for the round
-
-    io.write("How many opponents? [1 to 3] >> ")
-    opponentCount = GetInput(1,2,3)
 
     Game = {
         liveLeft = liveShells,
