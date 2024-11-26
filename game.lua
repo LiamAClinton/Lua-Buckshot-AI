@@ -11,11 +11,11 @@ function SetupGame()
     -- setting up the table here so when put inputted data directly into it
 
     Game = {
-        liveLeft,
-        blankLeft,
+        liveLeft = nil, -- gets defined later
+        blankLeft = nil, -- gets defined later
         totalLeft = function() return Game.liveLeft + Game.blankLeft end, -- avoids getting/setting an inaccurate value
-        maxBolts,
-        playerCount,
+        maxBolts = nil, -- gets defined later
+        playerCount = nil, -- gets defined later
         players = {} -- filling outside this via a loop
     }
 
