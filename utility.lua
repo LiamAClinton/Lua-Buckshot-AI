@@ -6,25 +6,29 @@ A file for custom utility functions
 
 -- helper function to make handling input that needs validation easier
 -- returns the user's inputted value, validated through the arg list
-function GetInput(...)
-    -- "args" is a table of legal inputs for the user to give
+function GetInput(validInputs)
+    -- "validInputs" is a table of legal inputs for the user to give
     local success = false -- flag for when we have valid input
-    local i = nil -- storing the user's input
+    local inp = nil -- storing the user's input
 
     while success ~= true do
-        i = io.read()
+        inp = io.read()
+        print(validInputs)
         -- seeing if what the user entered was a valid piece of input
-        for option in arg do
-            if i == option then success = true end
+        for _,v in ipairs(validInputs) do
+            if tonumber(inp) == v then
+                success = true
+                break
+            end
         end
         if success ~= true then
             local errString = "invalid input. please give one of the valid inputs:"
-            for entry in arg do
-                errString = errString .. " " .. entry
+            for _,v in ipairs(validInputs) do
+                errString = errString .. " " .. v
             end
             errString = errString .. " >> "
         end
     end
 
-    return i
+    return inp
 end
