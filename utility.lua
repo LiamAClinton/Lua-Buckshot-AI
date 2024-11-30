@@ -13,7 +13,6 @@ function GetInput(validInputs)
 
     while success ~= true do
         inp = io.read()
-        print(validInputs)
         -- seeing if what the user entered was a valid piece of input
         for _,v in ipairs(validInputs) do
             if tonumber(inp) == v then
