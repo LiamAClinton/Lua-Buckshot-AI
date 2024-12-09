@@ -18,7 +18,7 @@ function Main()
                  "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n",
                  ">> ")
 
-    -- input from user on menu behaviour
+        -- input from user on menu behaviour
         local i = io.read()
 
         if i == 'q' or i == 'Q' then
